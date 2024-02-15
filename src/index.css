@@ -1,0 +1,14 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #121212;
+}
+h2,p,span{
+  font-family:JetBrains Mono ;
+}

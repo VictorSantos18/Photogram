@@ -1,0 +1,30 @@
+.page-container{
+  margin: 0 0 0 240px;
+}
+.page-container .content{
+    /* padding: 0 18rem; */
+    padding: 2rem 0; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    min-height: 100vh;
+}
+@media(max-width:1264px) {
+  .page-container{
+    margin-left: 64px;
+    margin-right: 0;
+  }
+  .page-container .content{
+    padding: 2rem 12rem;
+  }
+}
+@media(max-width: 850px){
+  .page-container{
+    margin-left: 0;
+  }
+  .page-container .content{
+    padding: 0 4rem;
+    margin: 80px 0;
+  }
+}

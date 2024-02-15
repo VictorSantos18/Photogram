@@ -1,0 +1,82 @@
+.avatar-box{
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1/1;
+  background-image: linear-gradient(160deg, #1D1CE5 5%,#EA047E, #FFD372);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.avatar-profile-image{
+  width:50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 3px;
+  border: 3px solid white;
+}
+.carousel-status{
+  padding: 16px 0px;
+}
+.carousel-body{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow-x: scroll;
+  border-radius: 8px;
+  position: relative;
+  scroll-behavior: smooth;
+  transition: 700ms;
+}
+.carousel-body::-webkit-scrollbar {
+  display: none;
+}
+.avatar-detail{
+  margin-left: 20px;
+  text-align: center;
+}
+.avatar-name{
+  font-size: 12px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 60px;
+}
+.check{
+  position: relative;
+  width: 600px;
+}
+.arrow-btn{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  z-index: 999;
+  cursor: pointer;
+}
+.arrow-btn img{
+  width: 10px;
+  height: 10px;
+}
+.left-icon{
+  left: -14px;
+  top: 26px;
+}
+.right-icon{
+  right: -14px;
+  top: 26px;
+}
+@media(max-width:850px){
+  .check{
+    position: relative;
+    width: 400px;
+  }
+}
