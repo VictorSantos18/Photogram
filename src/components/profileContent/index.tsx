@@ -1,9 +1,28 @@
-import React from 'react'
-import './style.css'
-import ProfileImageCircle from '../../assets/bighead.svg'
-import { Heart, MessageCircleMore, Grid3X3, Flag, SquareUser, Plus } from 'lucide-react'
+import React, { useState } from 'react';
+import './style.css';
+import ProfileImageCircle from '../../assets/bighead.svg';
+import { Grid3X3, Flag, SquareUser, Plus } from 'lucide-react';
+import PostCard from './profilePost';
+import PostModal from '../modal/postModal';
+import { ProfilePostsData } from './data';
 
 const ProfileContent: React.FC = () => {
+
+  const [selectedPost, setSelectedPost] = useState<{ image: string; commentsContent: string[] } | null>(null); // Corrigindo o tipo de selectedPost
+
+  // Função para abrir o modal com o post selecionado
+  const openModal = (post: { image: string; commentsContent: string[] }) => { // Corrigindo o tipo do argumento
+    setSelectedPost(post);
+  };
+
+  // Função para fechar o modal
+  const closeModal = () => {
+    setSelectedPost(null);
+  };
+
+  const firstRowPosts = ProfilePostsData.slice(0, 3);
+  const secondRowPosts = ProfilePostsData.slice(3, 6);
+
   return (
     <div className='profile-content'>
       <div className="first-part">
@@ -30,6 +49,7 @@ const ProfileContent: React.FC = () => {
             <h2>Leonardo</h2>
             <span className='text-profile'>Come and draw with me.🎨</span><br />
             <span className='text-profile'>here you can find some pictures that i drew.🖌️</span>
+            
           </div>
         </div>
       </div>
@@ -69,7 +89,7 @@ const ProfileContent: React.FC = () => {
           </div>
           <div className='saves-item'>
             <div className="saves-image">
-              <Plus className='saves-icon'/>
+              <Plus className='saves-icon' />
             </div>
             <div className="saves-info">
               <p>Novo</p>
@@ -91,87 +111,35 @@ const ProfileContent: React.FC = () => {
           </div>
         </div>
         <div className="line">
-          <div className="photo">
-            <img src="https://blog.icons8.com/wp-content/uploads/2020/02/digital-illustration-brian-edward-miller.jpg" alt="" />
-            <div className='photo-info'>
-              <div>
-                <Heart />
-                <p>99999</p>
-              </div>
-              <div>
-                <MessageCircleMore />
-                <p>183</p>
-              </div>
+          {firstRowPosts.map((post, index) => (
+            <div key={index} onClick={() => openModal(post)}>
+              <PostCard
+                key={index}
+                image={post.image}
+                likes={post.likes}
+                comments={post.comments}
+                commentsContent={post.commentsContent}
+              />
             </div>
-          </div>
-          <div className="photo">
-            <img src="https://bst.icons8.com/wp-content/themes/icons8/app/uploads/2019/06/digital-illustration-brian-edward-miller-17.jpg" alt="" />
-            <div className='photo-info'>
-              <div>
-                <Heart />
-                <p>1043</p>
-              </div>
-              <div>
-                <MessageCircleMore />
-                <p>183</p>
-              </div>
-            </div>
-          </div>
-          <div className="photo">
-            <img src="https://bst.icons8.com/wp-content/themes/icons8/app/uploads/2019/06/digital-illustration-brian-edward-miller-20.jpg" alt="" />
-            <div className='photo-info'>
-              <div>
-                <Heart />
-                <p>1043</p>
-              </div>
-              <div>
-                <MessageCircleMore />
-                <p>183</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
         <div className="line">
-          <div className="photo">
-            <img src="https://bst.icons8.com/wp-content/themes/icons8/app/uploads/2019/06/digital-illustration-brian-edward-miller-1.jpg" alt="" />
-            <div className='photo-info'>
-              <div>
-                <Heart />
-                <p>1043</p>
-              </div>
-              <div>
-                <MessageCircleMore />
-                <p>183</p>
-              </div>
+          {secondRowPosts.map((post, index) => (
+            <div key={index} onClick={() => openModal(post)}>
+              <PostCard
+                key={index + 3}
+                image={post.image}
+                likes={post.likes}
+                comments={post.comments}
+                commentsContent={post.commentsContent}
+              />
             </div>
-          </div>
-          <div className="photo">
-            <img src="https://bst.icons8.com/wp-content/themes/icons8/app/uploads/2019/06/digital-illustration-brian-edward-miller-3-1024x768.jpg" alt="" />
-            <div className='photo-info'>
-              <div>
-                <Heart />
-                <p>1043</p>
-              </div>
-              <div>
-                <MessageCircleMore />
-                <p>183</p>
-              </div>
-            </div>
-          </div>
-          <div className="photo">
-            <img src="https://i.pinimg.com/originals/7e/c4/7d/7ec47d07330d01054c47ba664a26a798.png" alt="" />
-            <div className='photo-info'>
-              <div>
-                <Heart />
-                <p>1043</p>
-              </div>
-              <div>
-                <MessageCircleMore />
-                <p>183</p>
-              </div>
-            </div>
-          </div>
+          ))}
+          {selectedPost && (
+            <PostModal post={selectedPost} onClose={closeModal} />
+          )}
         </div>
+
       </div>
       <footer className='thirdy-part'>
         <h2>Photogram</h2>
@@ -180,4 +148,4 @@ const ProfileContent: React.FC = () => {
   )
 }
 
-export default ProfileContent
+export default ProfileContent;

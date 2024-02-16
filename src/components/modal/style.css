@@ -1,0 +1,135 @@
+/* MODAL CSS */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* cor de fundo semitransparente para o modal */
+  display: flex;
+  justify-content: center; /* Centralizar horizontalmente */
+  align-items: center; /* Centralizar verticalmente */
+}
+.modal-content {
+  background-color:#121212;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  height: 600px;
+}
+.modal-image {
+  width: 50%;
+  overflow: hidden; /* Para lidar com imagens grandes */
+}
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Para garantir que a imagem seja ajustada dentro do espaço disponível */
+}
+.modal-comments {
+  /* padding: 20px; */
+  width: 50%;
+  color: #fff;
+  display: flex;
+}
+.modal .modal-content .close {
+  position: absolute;
+  top: -9px;
+  right: 10px;
+font-size: 50px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* POSTMODAL CSS */
+.post-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-modal .post-modal-nav{
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #3c3c3c;
+}
+ .post-modal-image-circle{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;padding: 3px;
+  border: 1px solid #3c3c3c;
+}
+.map-content{
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+.map-content .map-comment{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.map-content .map-comment .map-comment-text{
+  font-size: 0.8rem;
+}
+.map-content .map-comment .map-comment-username{
+  font-size: 0.9rem;
+}
+
+.map-comment-input input{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 0.75rem;
+    background: #121212;
+    color: #f1f1f1;
+    border: none;
+    border-top: 1px solid #3c3c3c;
+}
+
+@media(max-width:850px){
+  .modal-content {
+    flex-direction: column;
+    max-width: 500px;
+  }
+  .modal-image, .modal-comments{
+    width: 100%;
+  }
+  .map-content {
+    max-height: 200px; /* Defina a altura máxima desejada */
+    overflow-y: scroll;
+  }
+  /* Estilos para a barra de rolagem */
+  .map-content::-webkit-scrollbar {
+    width: 10px; /* largura da barra de rolagem */
+  }
+  /* Estilos para a trilha (track) da barra de rolagem */
+  .map-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* cor de fundo da trilha */
+  }
+  /* Estilos para o "polegar" (thumb) da barra de rolagem */
+  .map-content::-webkit-scrollbar-thumb {
+    background: #888; /* cor do "polegar" */
+  }
+  /* Estilos para o "polegar" (thumb) da barra de rolagem quando hover */
+  .map-content::-webkit-scrollbar-thumb:hover {
+    background: #555; /* cor do "polegar" quando hover */
+  }
+  .post-modal .post-modal-nav {
+    width: 500px;
+    position: absolute;
+    background: #121212;
+    top: 71px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid #3c3c3c;
+  }
+}
