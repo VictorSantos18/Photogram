@@ -12,3 +12,7 @@
 h2,p,span{
   font-family:JetBrains Mono ;
 }
+.text{
+  font-size: 0.8rem;
+  color: #ccc;
+}

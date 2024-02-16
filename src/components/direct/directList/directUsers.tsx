@@ -15,7 +15,7 @@ const directUsers: React.FC<AvatarProps> = ({ image }) => {
         <img className="direct-profile-image" src={image.img} alt="" />
         <div>
           <p className='direct-name'>{image.name}</p>
-          <span className='text-profile'>Online agora</span></div>
+          <span className='text'>Online agora</span></div>
       </div>
 
     </div>

@@ -4,10 +4,14 @@ import { NavLink, Outlet } from 'react-router-dom'
 import { Home, Search, Compass, Play, MessageCircleMore, Heart, PlusSquare, Instagram } from 'lucide-react'
 import './style.css'
 
-const Sidebar:React.FC = () => {
+interface SidebarProps {
+  isOpen: boolean;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen })  => {
   return (
     <>
-      <div className='sidebar'>
+      <div className={`sidebar ${isOpen ? '' : 'closed-sidebar'}`}>
         <div className="sidebar-content">
           <div className="logo">
             <Instagram className='icon' />

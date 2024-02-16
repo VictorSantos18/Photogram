@@ -21,7 +21,6 @@
 .direct-list-container .direct-nav{
   display: flex;
   padding: 1rem;
-  gap: 1rem;
 }
 
 .direct-list-container .direct-list{
@@ -70,13 +69,13 @@
   gap: 1rem;
 }
 .direct-detail .direct-box .direct-profile-image{
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
 .text-profile{
-  width: 100px;
+  width: 100%;
   padding: 0.4rem;
   font-size: 0.8rem;
   color: #ccc;
