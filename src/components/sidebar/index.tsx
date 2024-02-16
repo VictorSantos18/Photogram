@@ -37,7 +37,7 @@ const Sidebar:React.FC = () => {
               <span className='text-link'>Reels</span>
             </div>
           </NavLink>
-          <NavLink to="/page5" >
+          <NavLink to="/direct" >
             <div className="link message">
               <MessageCircleMore className='icon' />
               <span className='text-link'>Mensagens</span>

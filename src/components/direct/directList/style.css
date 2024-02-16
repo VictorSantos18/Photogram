@@ -1,0 +1,91 @@
+/* DIRECTLIST.TSX */
+.direct-list-container{
+  border-right: 1px solid #3c3c3c;
+  min-height: 100vh;
+}
+.direct-list-container .direct-head{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #3c3c3c;
+  border-left: none;
+  width: 350px;
+}
+.direct-list-container .direct-head .direct-name{
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 1rem 0.5rem 1rem;
+}
+.direct-list-container .direct-head .direct-name .icon{
+  cursor: pointer;
+}
+.direct-list-container .direct-nav{
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.direct-list-container .direct-list{
+  border-right: 1px solid #3c3c3c;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 100vh;
+}
+.direct-list{
+  display: none;
+}
+.show-direct-list{
+    display: block;
+    border-right: 1px solid #3c3c3c;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 100vh;
+}
+
+.show-direct-list::-webkit-scrollbar {
+  width: 10px; /* largura da barra de rolagem */
+}
+/* Estilos para a trilha (track) da barra de rolagem */
+.show-direct-list::-webkit-scrollbar-track {
+  background: #f1f1f1; /* cor de fundo da trilha */
+}
+/* Estilos para o "polegar" (thumb) da barra de rolagem */
+.show-direct-list::-webkit-scrollbar-thumb {
+  background: #888; /* cor do "polegar" */
+}
+/* Estilos para o "polegar" (thumb) da barra de rolagem quando hover */
+.show-direct-list::-webkit-scrollbar-thumb:hover {
+  background: #555; /* cor do "polegar" quando hover */
+}
+
+
+
+
+/* DIRECTUSERS.TSX */
+
+.direct-detail .direct-box {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 1rem;
+  gap: 1rem;
+}
+.direct-detail .direct-box .direct-profile-image{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.text-profile{
+  width: 100px;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  color: #ccc;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-profile.active{
+  background: #3c3c3c;
+  border-radius: 8px;
+}

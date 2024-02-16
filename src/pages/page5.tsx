@@ -2,19 +2,22 @@ import React from 'react'
 import './style.css'
 import Sidebar from '../components/sidebar'
 import Mobile_Navigation from '../components/navbar'
+import DirectList from '../components/direct/directList'
+import DirectMessage from '../components/direct/DirectMessage'
 
-const Page5: React.FC = () => {
+const Direct: React.FC = () => {
   return (
     <div>
       <Sidebar />
       <div className='page-container'>
         <Mobile_Navigation />
-        <div className="content">
-          <h2>pagina 5</h2>
+        <div className="direct">
+          <DirectList />
+          <DirectMessage />
         </div>
       </div>
     </div>
   )
 }
 
-export default Page5
+export default Direct
