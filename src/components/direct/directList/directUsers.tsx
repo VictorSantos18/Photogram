@@ -8,7 +8,7 @@ interface AvatarProps {
   };
 }
 
-const directUsers: React.FC<AvatarProps> = ({ image }) => {
+const DirectUsers: React.FC<AvatarProps> = ({ image }) => {
   return (
     <div className='direct-detail'>
       <div className='direct-box'>
@@ -22,4 +22,4 @@ const directUsers: React.FC<AvatarProps> = ({ image }) => {
   );
 }
 
-export default directUsers
+export default DirectUsers

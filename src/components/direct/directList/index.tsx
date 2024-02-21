@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { CarrousselInfo } from '../../storys/Data'
 import './style.css'
 import DirectUsers from './directUsers'
 import { SquarePen } from 'lucide-react'
 
-const DirectList: React.FC = () => {
 
+const DirectList: React.FC = () => {
   const [toggle, setToggle] = useState(1);
   const [activeLink, setActiveLink] = useState(1);
 
@@ -13,7 +13,6 @@ const DirectList: React.FC = () => {
     setToggle(id);
     setActiveLink(id);
   }
-
   return (
     <>
       <div className="direct-list-container">
@@ -24,29 +23,33 @@ const DirectList: React.FC = () => {
           </div>
           <div className="direct-nav">
             <span
-              className={activeLink === 1 ? 'active text-profile' : 'text-profile'}
-              onClick={() => updateToggle(1)}
+              className={activeLink === 1 ? 'active text-direct' : 'text-direct'}
+              onClick={() => updateToggle(1)} // Você não precisa passar o usuário para o item "Principal"
             >
               Principal
             </span>
             <span
-              className={activeLink === 2 ? 'active text-profile' : 'text-profile'}
-              onClick={() => updateToggle(2)}
+              className={activeLink === 2 ? 'active text-direct' : 'text-direct'}
+              onClick={() => updateToggle(2)} // Você não precisa passar o usuário para o item "Geral"
             >
               Geral
             </span>
             <span
-              className={activeLink === 3 ? 'active text-profile' : 'text-profile'}
-              onClick={() => updateToggle(3)}
+              className={activeLink === 3 ? 'active text-direct' : 'text-direct'}
+              onClick={() => updateToggle(3)} // Você não precisa passar o usuário para o item "Solicitações"
             >
               Solicitações
             </span>
+
           </div>
         </div>
 
         <div className={toggle === 1 ? 'show-direct-list' : 'direct-list'}>
           {CarrousselInfo.map((item, index) => (
-            <DirectUsers key={index} image={item} />
+            <DirectUsers
+              key={index}
+              image={item}
+            />
           ))}
         </div>
         <div className={toggle === 2 ? 'show-direct-list' : 'direct-list'}>
@@ -61,4 +64,4 @@ const DirectList: React.FC = () => {
   )
 }
 
-export default DirectList
+export default DirectList;

@@ -28,6 +28,7 @@
   flex-direction: column;
   gap: 1rem;
 }
+
 .profile-content .first-part .profile-text .profile-bio .text-profile{
   font-size: 0.8rem;
   color: #ccc;
@@ -193,13 +194,13 @@
     gap: 0.75rem;
   }
   .profile-content .seccond-part, .saves, .navigation-bar{
-    max-width: 525px;
+    max-width: 450px;
   }
   .profile-content .seccond-part .line .photo {
-    width: 175px;
-    height: 175px;
+    width: 150px;
+    height: 150px;
   }
   .profile-content .seccond-part .line .photo .photo-info{
-    top: -175px;
+    top: -150px;
   }
 }

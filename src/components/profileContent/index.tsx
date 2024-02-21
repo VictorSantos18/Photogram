@@ -117,9 +117,7 @@ const ProfileContent: React.FC = () => {
                 key={index}
                 image={post.image}
                 likes={post.likes}
-                comments={post.comments}
-                commentsContent={post.commentsContent}
-              />
+                comments={post.comments} commentsContent={''}              />
             </div>
           ))}
         </div>
@@ -130,9 +128,7 @@ const ProfileContent: React.FC = () => {
                 key={index + 3}
                 image={post.image}
                 likes={post.likes}
-                comments={post.comments}
-                commentsContent={post.commentsContent}
-              />
+                comments={post.comments} commentsContent={''}              />
             </div>
           ))}
           {selectedPost && (

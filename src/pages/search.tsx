@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import './style.css'
 import Sidebar from '../components/sidebar'
-import Posts from '../components/posts'
-import ForYou from '../components/ForYou'
 import Mobile_Navigation from '../components/navbar'
 
-const Page1: React.FC = () => {
+const Search: React.FC = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -14,12 +12,11 @@ const Page1: React.FC = () => {
       <div className='page-container'>
         <Mobile_Navigation />
         <div className="content">
-          <Posts />
-          <ForYou />
+          <h2>pagina 2</h2>
         </div>
-      </div>  
+      </div>
     </div>
   )
 }
 
-export default Page1
+export default Search

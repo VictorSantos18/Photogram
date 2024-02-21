@@ -19,7 +19,7 @@ const Mobile_Navigation: React.FC = () => {
               <input type="Pesquisar" placeholder='Pesquisar' />
             </div>
             <div>
-              <NavLink to="/page6" >
+              <NavLink to="/notifications" >
                 <div className="link heart">
                   <Heart className='icon' />
                 </div>
@@ -30,25 +30,25 @@ const Mobile_Navigation: React.FC = () => {
 
         <footer className='bottombar'>
           <div className="bottombar-links">
-            <NavLink to="/page1">
+            <NavLink to="/">
               <div className="link home">
                 <Home className='icon' />
                 <span className='text-link'>Página inicial</span>
               </div>
             </NavLink>
-            <NavLink to="/page2" >
+            <NavLink to="/explore" >
               <div className="link compass">
                 <Compass className='icon' />
                 <span className='text-link'>Explorar</span>
               </div>
             </NavLink>
-            <NavLink to="/page3" >
+            <NavLink to="/reels" >
               <div className="link play">
                 <Play className='icon' />
                 <span className='text-link'>Reels</span>
               </div>
             </NavLink>
-            <NavLink to="/page4" >
+            <NavLink to="/new" >
               <div className="link plus">
                 <PlusSquare className='icon' />
                 <span className='text-link'>Criar</span>

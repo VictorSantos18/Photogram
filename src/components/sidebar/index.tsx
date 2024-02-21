@@ -17,25 +17,25 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen })  => {
             <Instagram className='icon' />
             <h2>instagram</h2>
           </div>
-          <NavLink to="/page1">
+          <NavLink to="/">
             <div className="link home">
               <Home className='icon' />
               <span className='text-link'>Página inicial</span>
             </div>
           </NavLink>
-          <NavLink to="/page2" >
+          <NavLink to="/search" >
             <div className="link search">
               <Search className='icon ' />
               <span className='text-link'>Pesquisa</span>
             </div>
           </NavLink>
-          <NavLink to="/page3" >
+          <NavLink to="/explore" >
             <div className="link compass">
               <Compass className='icon' />
               <span className='text-link'>Explorar</span>
             </div>
           </NavLink>
-          <NavLink to="/page4" >
+          <NavLink to="/reels" >
             <div className="link play">
               <Play className='icon' />
               <span className='text-link'>Reels</span>
@@ -47,13 +47,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen })  => {
               <span className='text-link'>Mensagens</span>
             </div>
           </NavLink>
-          <NavLink to="/page6" >
+          <NavLink to="/notifications" >
             <div className="link heart">
               <Heart className='icon' />
               <span className='text-link'>Notificação</span>
             </div>
           </NavLink>
-          <NavLink to="/page7" >
+          <NavLink to="/new" >
             <div className="link plus">
               <PlusSquare className='icon' />
               <span className='text-link'>Criar</span>

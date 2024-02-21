@@ -10,7 +10,7 @@ const Direct: React.FC = () => {
 
   return (
     <div>
-      <Sidebar isOpen={isOpen}/>
+      <Sidebar isOpen={isOpen} />
       <div className='direct-page-container'>
         <Mobile_Navigation />
         <div className="direct">
@@ -21,5 +21,6 @@ const Direct: React.FC = () => {
     </div>
   )
 }
+
 
 export default Direct
