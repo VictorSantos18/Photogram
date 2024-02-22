@@ -6,7 +6,7 @@ import ForYou from '../components/ForYou'
 import Mobile_Navigation from '../components/navbar'
 
 const Home: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen] = useState(true);
 
   return (
     <div>

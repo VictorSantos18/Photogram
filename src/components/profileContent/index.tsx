@@ -7,6 +7,13 @@ import PostModal from '../modal/postModal';
 import { ProfilePostsData } from './data';
 
 const ProfileContent: React.FC = () => {
+  const [toggle, setToggle] = useState(1);
+  const [activeLink, setActiveLink] = useState(1);
+
+  function updateToggle(id: number) {
+    setToggle(id);
+    setActiveLink(id);
+  }
 
   const [selectedPost, setSelectedPost] = useState<{ image: string; commentsContent: string[] } | null>(null); // Corrigindo o tipo de selectedPost
 
@@ -49,7 +56,7 @@ const ProfileContent: React.FC = () => {
             <h2>Leonardo</h2>
             <span className='text-profile'>Come and draw with me.🎨</span><br />
             <span className='text-profile'>here you can find some pictures that i drew.🖌️</span>
-            
+
           </div>
         </div>
       </div>
@@ -97,44 +104,74 @@ const ProfileContent: React.FC = () => {
           </div>
         </div>
         <div className="navigation-bar">
-          <div>
+          <span
+            className={activeLink === 1 ? 'active text-direct' : 'text-direct'}
+            onClick={() => updateToggle(1)}
+          >
             <Grid3X3 className='profile-icon' />
             <p>Publicações</p>
-          </div>
-          <div>
+          </span>
+          <span
+            className={activeLink === 2 ? 'active text-direct' : 'text-direct'}
+            onClick={() => updateToggle(2)}
+          >
             <Flag className='profile-icon' />
-            <p>Marcados</p>
-          </div>
-          <div>
+            <p>Preferidas</p>
+          </span>
+          <span
+            className={activeLink === 3 ? 'active text-direct' : 'text-direct'}
+            onClick={() => updateToggle(3)}
+          >
             <SquareUser className='profile-icon' />
-            <p>Salvos</p>
-          </div>
+            <p>Marcadas</p>
+          </span>
         </div>
-        <div className="line">
-          {firstRowPosts.map((post, index) => (
-            <div key={index} onClick={() => openModal(post)}>
-              <PostCard
-                key={index}
-                image={post.image}
-                likes={post.likes}
-                comments={post.comments} commentsContent={''}              />
+
+        <div className={toggle === 1 ? 'show-first-line' : 'line'}>
+          {[...Array(Math.ceil(ProfilePostsData.length / 3))].map((_, rowIndex) => (
+            <div className="post-row" key={rowIndex}>
+              {ProfilePostsData.slice(rowIndex * 3, (rowIndex + 1) * 3).map((post, index) => (
+                <div key={index} onClick={() => openModal(post)}>
+                  <PostCard
+                    key={index}
+                    image={post.image}
+                    likes={post.likes}
+                    comments={post.comments}
+                    commentsContent={''}
+                  />
+                </div>
+              ))}
             </div>
           ))}
         </div>
-        <div className="line">
+
+        <div className={toggle === 2 ? 'show-line' : 'line'}>
+          {firstRowPosts.map((post, index) => (
+            <div key={index} onClick={() => openModal(post)}>
+              <PostCard
+                key={index + 3}
+                image={post.image}
+                likes={post.likes}
+                comments={post.comments} commentsContent={''} />
+            </div>
+          ))}
+
+        </div>
+        <div className={toggle === 3 ? 'show-line' : 'line'}>
           {secondRowPosts.map((post, index) => (
             <div key={index} onClick={() => openModal(post)}>
               <PostCard
                 key={index + 3}
                 image={post.image}
                 likes={post.likes}
-                comments={post.comments} commentsContent={''}              />
+                comments={post.comments} commentsContent={''} />
             </div>
           ))}
-          {selectedPost && (
-            <PostModal post={selectedPost} onClose={closeModal} />
-          )}
+
         </div>
+        {selectedPost && (
+          <PostModal post={selectedPost} onClose={closeModal} />
+        )}
 
       </div>
       <footer className='thirdy-part'>

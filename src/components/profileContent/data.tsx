@@ -1,7 +1,7 @@
 export const ProfilePostsData = [
   {
     image: "https://blog.icons8.com/wp-content/uploads/2020/02/digital-illustration-brian-edward-miller.jpg",
-    likes: 1024,
+    likes: 0,
     comments: 52,
     commentsContent: [
       { user: "User1", content: "Esse design é incrível! Adoro os detalhes e as cores." },
@@ -14,7 +14,7 @@ export const ProfilePostsData = [
   },
   {
     image: "https://bst.icons8.com/wp-content/themes/icons8/app/uploads/2019/06/digital-illustration-brian-edward-miller-17.jpg",
-    likes: 1382,
+    likes: 0,
     comments: 73,
     commentsContent: [
       { user: "User1", content: "Esse design é incrível! Adoro os detalhes e as cores." },
@@ -27,7 +27,7 @@ export const ProfilePostsData = [
   },
   {
     image: "https://bst.icons8.com/wp-content/themes/icons8/app/uploads/2019/06/digital-illustration-brian-edward-miller-20.jpg",
-    likes: 1104,
+    likes: 0,
     comments: 64,
     commentsContent: [
       { user: "User1", content: "Esse design é incrível! Adoro os detalhes e as cores." },
@@ -40,7 +40,7 @@ export const ProfilePostsData = [
   },
   {
     image: "https://bst.icons8.com/wp-content/themes/icons8/app/uploads/2019/06/digital-illustration-brian-edward-miller-1.jpg",
-    likes: 1530,
+    likes: 0,
     comments: 87,
     commentsContent: [
       { user: "User1", content: "Esse design é incrível! Adoro os detalhes e as cores." },
@@ -53,7 +53,7 @@ export const ProfilePostsData = [
   },
   {
     image: "https://bst.icons8.com/wp-content/themes/icons8/app/uploads/2019/06/digital-illustration-brian-edward-miller-3-1024x768.jpg",
-    likes: 1530,
+    likes: 0,
     comments: 87,
     commentsContent: [
       { user: "User1", content: "Esse design é incrível! Adoro os detalhes e as cores." },
@@ -66,7 +66,7 @@ export const ProfilePostsData = [
   },
   {
     image: "https://i.pinimg.com/originals/7e/c4/7d/7ec47d07330d01054c47ba664a26a798.png",
-    likes: 1530,
+    likes: 0,
     comments: 87,
     commentsContent: [
       { user: "User1", content: "Esse design é incrível! Adoro os detalhes e as cores." },

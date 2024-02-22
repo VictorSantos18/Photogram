@@ -20,7 +20,7 @@
 }
 .direct-list-container .direct-nav{
   display: flex;
-  padding: 1rem;
+  padding-top: 1rem;
 }
 
 .direct-list-container .direct-list{
@@ -34,9 +34,6 @@
 }
 .show-direct-list{
     display: block;
-    border-right: 1px solid #3c3c3c;
-    overflow-y: scroll;
-    overflow-x: hidden;
     max-height: 100vh;
 }
 

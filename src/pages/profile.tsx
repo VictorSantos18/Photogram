@@ -5,7 +5,7 @@ import Mobile_Navigation from '../components/navbar'
 import ProfileContent from '../components/profileContent'
 
 const Profile: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen] = useState(true);
 
   return (
     <div>

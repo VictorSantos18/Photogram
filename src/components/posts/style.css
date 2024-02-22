@@ -54,6 +54,9 @@ font-size: 1rem;
 .divisor{
   background-color: #252525;
 }
+.icon.liked{
+  color: red;
+}
 @media(max-width:850px) {
   .post-card{
     width: 400px;

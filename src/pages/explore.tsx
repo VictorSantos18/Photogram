@@ -5,7 +5,7 @@ import Mobile_Navigation from '../components/navbar'
 import ExploreContent from '../components/explore'
 
 const Explore: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen] = useState(true);
 
   return (
     <div>

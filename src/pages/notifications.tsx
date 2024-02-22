@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import './style.css'
 import Sidebar from '../components/sidebar'
 import Mobile_Navigation from '../components/navbar'
-import DirectList from '../components/direct/directList'
-import DirectMessage from '../components/direct/DirectMessage'
+import NotificationList from '../components/notifications'
 
-const Direct: React.FC = () => {
+const Notifications: React.FC = () => {
   const [isOpen] = useState(false);
 
   return (
@@ -14,8 +13,7 @@ const Direct: React.FC = () => {
       <div className='direct-page-container'>
         <Mobile_Navigation />
         <div className="direct">
-          <DirectList />
-          <DirectMessage />
+         <NotificationList />
         </div>
       </div>
     </div>
@@ -23,4 +21,4 @@ const Direct: React.FC = () => {
 }
 
 
-export default Direct
+export default Notifications

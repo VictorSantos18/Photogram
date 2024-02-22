@@ -4,7 +4,7 @@ import Sidebar from '../components/sidebar'
 import Mobile_Navigation from '../components/navbar'
 
 const Reels: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen] = useState(true);
 
   return (
     <div>

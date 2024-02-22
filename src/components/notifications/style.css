@@ -1,0 +1,36 @@
+.notification-list-container{
+  border-right: 1px solid #3c3c3c;
+  width: 350px;
+  min-height: 100vh;
+  padding: 0 1.5rem;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+.notification-list-container .notification-list-head{
+  display: flex;
+  flex-direction: column;
+}
+.notification-list-content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid #3c3c3c;
+  padding: 2rem 0;
+}
+ .notification-list-content-image img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+ }
+ .notification-list-content-info .notify-text{
+  font-size: 0.8rem;
+ }
+ .notification-list-content-post img{
+  width: 40px;
+  height: 40px;
+ }
+ .notification-list-content-item{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+ }
