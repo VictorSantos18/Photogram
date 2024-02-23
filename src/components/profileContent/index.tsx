@@ -105,21 +105,21 @@ const ProfileContent: React.FC = () => {
         </div>
         <div className="navigation-bar">
           <span
-            className={activeLink === 1 ? 'active text-direct' : 'text-direct'}
+            className={activeLink === 1 ? 'active text-profile' : 'text-profile'}
             onClick={() => updateToggle(1)}
           >
             <Grid3X3 className='profile-icon' />
             <p>Publicações</p>
           </span>
           <span
-            className={activeLink === 2 ? 'active text-direct' : 'text-direct'}
+            className={activeLink === 2 ? 'active text-profile' : 'text-profile'}
             onClick={() => updateToggle(2)}
           >
             <Flag className='profile-icon' />
             <p>Preferidas</p>
           </span>
           <span
-            className={activeLink === 3 ? 'active text-direct' : 'text-direct'}
+            className={activeLink === 3 ? 'active text-profile' : 'text-profile'}
             onClick={() => updateToggle(3)}
           >
             <SquareUser className='profile-icon' />
@@ -175,7 +175,7 @@ const ProfileContent: React.FC = () => {
 
       </div>
       <footer className='thirdy-part'>
-        <h2>Photogram</h2>
+        <span>Copyright@2024 Photogram.</span>
       </footer>
     </div>
   )

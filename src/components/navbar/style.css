@@ -76,7 +76,7 @@
 }
 
 .bottombar .bottombar-links a.active {
-  background: #343434;
+  border: 1px solid #ccc;
   border-radius: 8px;
 
 }

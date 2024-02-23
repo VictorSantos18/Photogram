@@ -5,7 +5,6 @@ import Direct from './pages/direct';
 import Home from './pages/home';
 import Search from './pages/search';
 import Explore from './pages/explore';
-import Reels from './pages/reels';
 import Notifications from './pages/notifications';
 
 const App: React.FC = () => {
@@ -15,7 +14,6 @@ const App: React.FC = () => {
         <Route path='/' element={<Home />} />
         <Route path='/search' element={<Search />} />
         <Route path='/explore' element={<Explore />} />
-        <Route path='/reels' element={<Reels />} />
         <Route path='/direct' element={<Direct />} />
         <Route path='/notifications' element={<Notifications />} />
         <Route path='/perfil/DrawWithMe' element={<Profile />} />

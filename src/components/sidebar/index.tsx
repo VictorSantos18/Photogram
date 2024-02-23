@@ -1,7 +1,7 @@
 import React from 'react'
 import ProfileImage from '../../assets/bighead.svg'
 import { NavLink, Outlet } from 'react-router-dom'
-import { Home, Search, Compass, Play, MessageCircleMore, Heart, PlusSquare, Instagram } from 'lucide-react'
+import { Home, Search, Compass, MessageCircleMore, Heart, PlusSquare, Instagram } from 'lucide-react'
 import './style.css'
 
 interface SidebarProps {
@@ -15,7 +15,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen })  => {
         <div className="sidebar-content">
           <div className="logo">
             <Instagram className='icon' />
-            <h2>instagram</h2>
+            <h2>Photogram</h2>
           </div>
           <NavLink to="/">
             <div className="link home">
@@ -33,12 +33,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen })  => {
             <div className="link compass">
               <Compass className='icon' />
               <span className='text-link'>Explorar</span>
-            </div>
-          </NavLink>
-          <NavLink to="/reels" >
-            <div className="link play">
-              <Play className='icon' />
-              <span className='text-link'>Reels</span>
             </div>
           </NavLink>
           <NavLink to="/direct" >

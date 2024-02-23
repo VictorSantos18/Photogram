@@ -95,7 +95,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
 }
 .profile-content .seccond-part .navigation-bar > div{
   display: flex;
@@ -108,7 +107,19 @@
   width: 15px;
   height: 15px;
 }
-
+.profile-content .seccond-part .navigation-bar .text-profile{
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  color: #ccc;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-profile.active {
+  border-top: 1px solid #ccc;
+}
 /* bloco preferidos e marcador */
 .line{
 display: none;
@@ -200,6 +211,18 @@ display: none;
 .profile-content .seccond-part .show-first-line .post-column .photo {
   width: 100%;
   height: auto; 
+}
+
+/* Terceira parte / footer */
+.profile-content .thirdy-part{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-content .thirdy-part span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media(max-width:1264px){

@@ -1,9 +1,26 @@
 import React from 'react'
+import ProfileImage from '../../assets/bighead.svg'
 import './style.css'
+import { Link } from 'react-router-dom'
 
-const ForYou:React.FC = () => {
+const ForYou: React.FC = () => {
   return (
     <div className='foryou-container'>
+
+      <div className="account">
+        <div className='account-box'>
+          <img src={ProfileImage} alt="" />
+          <div className="account-info">
+            <h2>DrawWithMe</h2>
+            <p>Australia</p>
+          </div>
+        </div>
+        <div>
+          <Link to='/perfil/DrawWithMe'>
+            <p className='follow'>Ver</p>
+          </Link>
+        </div>
+      </div>
       <p>Sugestões para você</p>
       <div className="account">
         <div className='account-box'>

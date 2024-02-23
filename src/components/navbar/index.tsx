@@ -2,7 +2,7 @@ import { MessageCircleMore, PlusSquare, Search } from 'lucide-react'
 import './style.css'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { Home, Compass, Play, Heart } from 'lucide-react'
+import { Home, Compass, Heart } from 'lucide-react'
 import ProfileImage from '../../assets/bighead.svg'
 
 const Mobile_Navigation: React.FC = () => {
@@ -40,12 +40,6 @@ const Mobile_Navigation: React.FC = () => {
               <div className="link compass">
                 <Compass className='icon' />
                 <span className='text-link'>Explorar</span>
-              </div>
-            </NavLink>
-            <NavLink to="/reels" >
-              <div className="link play">
-                <Play className='icon' />
-                <span className='text-link'>Reels</span>
               </div>
             </NavLink>
             <NavLink to="/new" >

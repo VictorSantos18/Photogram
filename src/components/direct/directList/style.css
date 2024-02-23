@@ -37,34 +37,21 @@
     max-height: 100vh;
 }
 
-.show-direct-list::-webkit-scrollbar {
-  width: 10px; /* largura da barra de rolagem */
-}
-/* Estilos para a trilha (track) da barra de rolagem */
-.show-direct-list::-webkit-scrollbar-track {
-  background: #f1f1f1; /* cor de fundo da trilha */
-}
-/* Estilos para o "polegar" (thumb) da barra de rolagem */
-.show-direct-list::-webkit-scrollbar-thumb {
-  background: #888; /* cor do "polegar" */
-}
-/* Estilos para o "polegar" (thumb) da barra de rolagem quando hover */
-.show-direct-list::-webkit-scrollbar-thumb:hover {
-  background: #555; /* cor do "polegar" quando hover */
-}
 
 
 
 
 /* DIRECTUSERS.TSX */
 
-.direct-detail .direct-box {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  margin: 1rem;
-  gap: 1rem;
-}
+  .direct-detail .direct-box {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+  .direct-detail .direct-box:hover {
+    background: #3c3c3c;
+  }
 .direct-detail .direct-box .direct-profile-image{
   width: 50px;
   height: 50px;
@@ -81,7 +68,6 @@
   justify-content: center;
   align-items: center;
 }
-.text-direct.active{
-  background: #3c3c3c;
-  border-radius: 8px;
+.text-direct.active {
+  border-bottom: 1px solid #ccc;
 }

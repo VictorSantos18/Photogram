@@ -14,7 +14,6 @@
 .sidebar-content{
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 .sidebar .sidebar-content .logo{
   padding: 1.5rem;
@@ -87,6 +86,10 @@
     justify-content: center;
     padding: 1.5rem 0;
 }
+  .sidebar .sidebar-content a.active {
+    background: none;
+    border: 1px solid #ccc;
+  }
   .sidebar .sidebar-content .logo h2{
     display: none;
   }
