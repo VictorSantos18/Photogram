@@ -6,7 +6,7 @@
   
 # :bookmark_tabs: Sobre o projeto
 Esse foi um desafio pessoal, que foi desenvolver toda interface do instagram apenas olhando (apenas o front-end e algumas funcionalidades como filtro e mudanças de estado).
-Gostei bastante desse desafio pois foi algo que colocou a prova todas as minhas habilidades visuais e analiticas com relação ao design e toda a estrutura em si do front-end
+Gostei bastante desse desafio pois foi algo que colocou a prova todas as minhas habilidades visuais e analiticas com relação ao design e toda a estrutura em si do front-end.
 
 <span id="requisitos">
 
