@@ -11,6 +11,14 @@
 h2,p,span{
   font-family:JetBrains Mono ;
 }
+button {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  background: #3c3c3c;
+  cursor: pointer;
+}
 .text{
   font-size: 0.8rem;
   color: #ccc;
@@ -93,9 +101,51 @@ color: #000000;
 .light-theme .arrow-btn {
   background-color: #f1f1f1;
 }
+.light-theme .config-container .config-user-info{
+  background: #f1f1f1;
+}
+
+.light-theme .config-website-link input{
+  background-color: #f1f1f1;
+}
+.light-theme .config-user-bio textarea{
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+
+
 /* ----------------------------- Dark Theme -----------------------------   */
 .dark-theme {
   transition: 200ms;
   background-color: #121212;
   color: rgba(255, 255, 255, 0.87);
+}
+
+/* ----------------------------- Dark Theme -----------------------------   */
+
+input[type=checkbox] {
+  visibility: hidden;
+}
+.checkbox {
+  width: 35px;
+  height: 15px;
+  background: #555;
+  position: relative;
+  border-radius: 5px;
+}
+.checkbox label {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: all .3s ease;
+  cursor: pointer;
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  background: #ccc;
+}
+.checkbox input[type=checkbox]:checked + label {
+  left: 20px;
 }

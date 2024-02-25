@@ -1,0 +1,87 @@
+
+.item{
+  width: 100%;
+  padding: 1rem 0;
+}
+.last-item{
+  width: 100%;
+  max-width: 700px;
+  border: 2px solid #3c3c3c;
+  border-radius: 10px;
+  padding:  1rem ;
+  display: flex;
+  align-items: center;
+}
+.last-item .text, .last-item .title{
+  padding: 0;
+}
+.btn-item{
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title{
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 1rem 1rem 0;
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
+}
+.config-container .config-user-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
+  background: #3c3c3c;
+  border: 1px solid #3c3c3c;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.config-container .config-user-info .right{
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+.config-container .config-user-info .right img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 2px;
+}
+.blu{
+  background: #3657dc;
+}
+.blu:hover{
+  background: #1f3fbf;
+}
+
+
+
+.config-container .config-website-link, .config-user-bio, .config-account-info{
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
+}
+.config-container .config-website-link input{
+  margin-bottom: 0.5rem;
+  padding:0.7rem 1rem;
+  border-radius: 8px;
+  background-color: #3c3c3c;
+  border: 1px solid #3c3c3c;
+  color: #fff;
+  width: 100%;
+}
+
+.config-container .config-user-bio textarea{
+width: 100%;
+max-width: 700px;
+height: 150px;
+padding: 0.5rem 1rem;
+border-radius: 8px;
+background-color: #3c3c3c;
+color: #ccc;
+}

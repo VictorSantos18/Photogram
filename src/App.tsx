@@ -6,6 +6,7 @@ import Home from './pages/home';
 import Search from './pages/search';
 import Explore from './pages/explore';
 import Notifications from './pages/notifications';
+import Configuration from './pages/configurations';
 
 
 const App: React.FC = () => {
@@ -25,6 +26,7 @@ const App: React.FC = () => {
           <Route path='/direct' element={<Direct toggleTheme={toggleTheme} />} />
           <Route path='/notifications' element={<Notifications toggleTheme={toggleTheme} />} />
           <Route path='/perfil/DrawWithMe' element={<Profile toggleTheme={toggleTheme} />} />
+          <Route path='/configurações/edit' element={<Configuration toggleTheme={toggleTheme} />} />
         </Routes>
       </div>
     </Router>

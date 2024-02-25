@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Bolt, LineChart, Moon, Sun, Flag, MessageSquareWarning } from 'lucide-react';
+import { Bolt, Moon, Sun, Flag, MessageSquareWarning } from 'lucide-react';
 import './style.css';
 import WarningModal from '../WarningModal';
 
@@ -32,19 +32,13 @@ const Dropdown: React.FC<DropdownProps> = ({ toggleTheme, currentTheme }) => {
 
   return (
     <div className='dropdown-links'>
-      <NavLink>
+      <NavLink to='/configurações/edit'>
         <div className='dropdown-link'>
           <Bolt className='icon' />
           <span className='text'>Configurações</span>
         </div>
       </NavLink>
-      <NavLink>
-        <div className='dropdown-link'>
-          <LineChart className='icon' />
-          <span className='text'>Sua Atividade</span>
-        </div>
-      </NavLink>
-      <NavLink>
+      <NavLink to='/perfil/DrawWithMe'>
         <div className='dropdown-link'>
           <Flag className='icon' />
           <span className='text'>Preferidos</span>
@@ -56,7 +50,7 @@ const Dropdown: React.FC<DropdownProps> = ({ toggleTheme, currentTheme }) => {
         ) : (
           <Moon className='icon' />
         )}
-        <span className='text'>Alternar Tema</span>
+        <span className='text'>Dark/Light Mode</span>
         <div className="checkbox">
           <input type="checkbox" checked={isChecked} readOnly />
           <label htmlFor="checkboxOneInput"></label>
