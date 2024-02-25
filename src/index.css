@@ -8,10 +8,6 @@
 *:focus{
   outline: none;
 }
-:root {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #121212;
-}
 h2,p,span{
   font-family:JetBrains Mono ;
 }
@@ -30,4 +26,76 @@ h2,p,span{
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+
+/* ----------------------------- Light Theme ----------------------------- */
+.light-theme {
+  transition: 200ms;
+  background-color: #ffffff;
+  color: #000;
+}
+.light-theme h2 {
+  color: #000;
+}
+.light-theme p {
+  color: #000;
+}
+.light-theme .icon{
+color: #000000;
+}
+.light-theme .sidebar .link .text-link {
+  color: #000000;
+}
+.light-theme .sidebar .sidebar-content a.active{
+  background: #c4c4c4;
+}
+.light-theme .sidebar-content .link:hover{
+  background: #c4c4c4;
+}
+.light-theme .avatar-name {
+  color: #000;
+}
+.light-theme  .text{
+  color: #000;
+}
+.light-theme .text-direct{
+  color: #000;
+}
+.light-theme .search-container .search-content .search-head input{
+  background: #f1f1f1;
+  color: #000;
+}
+.light-theme .profile-content .first-part .profile-text .profile-bio .text-profile {
+  color: #000;
+}
+.light-theme .dropdown-links{
+  background: #f1f1f1;
+}
+.light-theme .dropdown-links .dropdown-link:hover{
+  background: #ccc;
+}
+.light-theme .modal-content{
+  background: #ffffff;
+}
+.light-theme .map-content .map-comment .map-comment-text {
+  color: #000;
+}
+.light-theme .modal-overlay .warning-modal .warning-modal-content {
+  background-color:#f1f1f1;
+}
+.light-theme .modal-overlay .warning-modal .warning-modal-content .warning-modal-content-info textarea{
+  background-color: #f1f1f1;
+  color: #000;
+}
+.light-theme .modal-overlay .warning-modal .warning-modal-content .warning-modal-content-head .close {
+  color: #000;
+}
+.light-theme .arrow-btn {
+  background-color: #f1f1f1;
+}
+/* ----------------------------- Dark Theme -----------------------------   */
+.dark-theme {
+  transition: 200ms;
+  background-color: #121212;
+  color: rgba(255, 255, 255, 0.87);
 }

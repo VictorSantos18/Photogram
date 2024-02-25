@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProfileImage from '../../assets/bighead.svg'
-import { NavLink, Outlet } from 'react-router-dom'
-import { Home, Search, Compass, MessageCircleMore, Heart, PlusSquare, Instagram } from 'lucide-react'
+import { NavLink } from 'react-router-dom'
+import { Home, Search, Compass, MessageCircleMore, Heart, PlusSquare, Instagram, AlignJustify, Moon } from 'lucide-react'
 import './style.css'
+import Dropdown from './Dropdown'
 
 interface SidebarProps {
   isOpen: boolean;
+  toggleTheme: () => void;
 }
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleTheme }) => {
+  const [openDropdown, setOpenDropdown] = useState(false);
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen })  => {
   return (
     <>
       <div className={`sidebar ${isOpen ? '' : 'closed-sidebar'}`}>
@@ -59,14 +62,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen })  => {
               <span className='text-link'>Perfil</span>
             </div>
           </NavLink>
-          <div className="link-bottom">
-          </div>
         </div>
+        <div className="link" onClick={() => setOpenDropdown(prev => !prev)}>
+          <AlignJustify />
+          <span className='text-link'>Mais</span>
+        </div>
+        {openDropdown && <Dropdown toggleTheme={toggleTheme} />} {/* Passe toggleTheme para o Dropdown */}
+      </div>
 
-      </div>
-      <div>
-        <Outlet />
-      </div>
     </>
   )
 }

@@ -7,6 +7,7 @@
   border-right: 3px solid #3c3c3c;
   width: 240px;
   padding: 1.5rem 0;
+  height: 100%;
 }
 .sidebar .sidebar-content .logo .icon{
   display: none;
@@ -30,6 +31,23 @@
   transition: 300ms;
 }
 .sidebar-content .link .text-link{
+  color: #fff;
+  font-size: 0.8rem;
+}
+.sidebar .link{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+  padding: 0.5rem ;
+  border-radius: 8px;
+}
+.sidebar .link:hover{
+  background: #454545;
+  transition: 300ms;
+}
+.sidebar .link .text-link{
   color: #fff;
   font-size: 0.8rem;
 }
@@ -57,6 +75,10 @@
 .sidebar.closed-sidebar{
   width: 60px;
 }
+.sidebar .sidebar-content {
+  display: flex;
+  height: 100%;
+}
 .sidebar.closed-sidebar .sidebar-content .logo {
   display: flex;
   justify-content: center;
@@ -74,9 +96,67 @@
 .sidebar.closed-sidebar .sidebar-content .link{
   justify-content: center;
 }
+.sidebar.closed-sidebar .sidebar-content .link-bottom{
+  position: absolute;
+  bottom: 10px;
+}
+/* DROPDOWN LINK */
+  .dropdown-links{
+    position: absolute;
+    z-index: 20;
+    width: 240px;
+    background: #2d2d2d;
+    bottom: 70px;
+    left: 15px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    border-radius: 10px;
+  }
+  .dropdown-links .dropdown-link{
+    display: flex;
+    padding: 0.7rem  0.5rem;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .dropdown-links .dropdown-link:hover{
+    background: #454545;
+  }
+
+
+  input[type=checkbox] {
+    visibility: hidden;
+  }
+  .checkbox {
+    width: 35px;
+    height: 15px;
+    background: #555;
+    position: relative;
+    border-radius: 5px;
+  }
+  .checkbox label {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transition: all .3s ease;
+    cursor: pointer;
+    position: absolute;
+    top: -2px;
+    left: -3px;
+    background: #ccc;
+  }
+  .checkbox input[type=checkbox]:checked + label {
+    left: 20px;
+  }
+
+
 
 /* MEDIA QUERYS */
-
 @media(max-width:1264px) {
   .sidebar{
     width: 60px;
@@ -100,6 +180,9 @@
     display: none;
   }
   .sidebar-content .link{
+    justify-content: center;
+  }
+  .sidebar .link{
     justify-content: center;
   }
 }

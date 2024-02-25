@@ -5,12 +5,13 @@ import Posts from '../components/posts'
 import ForYou from '../components/ForYou'
 import Mobile_Navigation from '../components/navbar'
 
-const Home: React.FC = () => {
+const Home: React.FC<{toggleTheme: () => void}> = ({ toggleTheme }) => {
   const [isOpen] = useState(true);
+
 
   return (
     <div>
-      <Sidebar isOpen={isOpen}/>
+      <Sidebar isOpen={isOpen} toggleTheme={toggleTheme}/>
       <div className='page-container'>
         <Mobile_Navigation />
         <div className="content">

@@ -135,8 +135,6 @@ const ProfileContent: React.FC = () => {
                   <PostCard
                     key={index}
                     image={post.image}
-                    likes={post.likes}
-                    comments={post.comments}
                     commentsContent={''}
                   />
                 </div>
@@ -151,7 +149,7 @@ const ProfileContent: React.FC = () => {
               <PostCard
                 key={index + 3}
                 image={post.image}
-                likes={post.likes}
+             
                 comments={post.comments} commentsContent={''} />
             </div>
           ))}
@@ -163,7 +161,7 @@ const ProfileContent: React.FC = () => {
               <PostCard
                 key={index + 3}
                 image={post.image}
-                likes={post.likes}
+             
                 comments={post.comments} commentsContent={''} />
             </div>
           ))}
