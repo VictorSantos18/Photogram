@@ -1,4 +1,4 @@
-import { MessageCircleMore, PlusSquare, Search } from 'lucide-react'
+import { MessageCircleMore, Search } from 'lucide-react'
 import './style.css'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
@@ -40,12 +40,6 @@ const Mobile_Navigation: React.FC = () => {
               <div className="link compass">
                 <Compass className='icon' />
                 <span className='text-link'>Explorar</span>
-              </div>
-            </NavLink>
-            <NavLink to="/new" >
-              <div className="link plus">
-                <PlusSquare className='icon' />
-                <span className='text-link'>Criar</span>
               </div>
             </NavLink>
             <NavLink to="/direct" >

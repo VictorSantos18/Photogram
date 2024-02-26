@@ -148,9 +148,9 @@ const ProfileContent: React.FC = () => {
             <div key={index} onClick={() => openModal(post)}>
               <PostCard
                 key={index + 3}
-                image={post.image}
-             
-                comments={post.comments} commentsContent={''} />
+                image={post.image} 
+                commentsContent={''} 
+                />
             </div>
           ))}
 
@@ -161,8 +161,8 @@ const ProfileContent: React.FC = () => {
               <PostCard
                 key={index + 3}
                 image={post.image}
-             
-                comments={post.comments} commentsContent={''} />
+                commentsContent={''} 
+                />
             </div>
           ))}
 

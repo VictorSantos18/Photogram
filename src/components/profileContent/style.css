@@ -138,8 +138,8 @@ display: none;
   cursor: pointer;
 }
 .profile-content .seccond-part .show-line .photo img{
-  height: 300px;
-  width: 300px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .profile-content .seccond-part .show-line .photo .photo-info{
@@ -187,9 +187,9 @@ display: none;
   background: rgba(0, 0, 0,0.6);
   align-items: center;
   opacity: 0;
-  transition: 0.6s;z
+  transition: 0.6s;
 }
-.profile-content .seccond-part .show-first-line .photo:hover .photo-info{
+.profile-content .seccond-part .show-first-line .photo .photo-info{
   opacity: 1;
 }
 
@@ -252,15 +252,9 @@ display: none;
     width: 200px;
     height: 200px;
   }
-  .profile-content .seccond-part .show-line .photo .photo-info{
-    top: -200px;
-  }
   .profile-content .seccond-part .show-first-line .photo {
     width: 200px;
     height: 200px;
-  }
-  .profile-content .seccond-part .show-first-line .photo .photo-info{
-    top: -200px;
   }
 }
 @media(max-width: 645px) {

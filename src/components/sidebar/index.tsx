@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ProfileImage from '../../assets/bighead.svg'
 import { NavLink } from 'react-router-dom'
-import { Home, Search, Compass, MessageCircleMore, Heart, PlusSquare, Instagram, AlignJustify, Moon } from 'lucide-react'
+import { Home, Search, Compass, MessageCircleMore, Heart, Instagram, AlignJustify } from 'lucide-react'
 import './style.css'
 import Dropdown from './Dropdown'
 
@@ -50,12 +50,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleTheme }) => {
               <span className='text-link'>Notificação</span>
             </div>
           </NavLink>
-          <NavLink to="/new" >
-            <div className="link plus">
-              <PlusSquare className='icon' />
-              <span className='text-link'>Criar</span>
-            </div>
-          </NavLink>
           <NavLink to="/perfil/DrawWithMe" >
             <div className="link">
               <img src={ProfileImage} alt="imagem de perfil" className='profile-img' />
@@ -67,7 +61,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleTheme }) => {
           <AlignJustify />
           <span className='text-link'>Mais</span>
         </div>
-        {openDropdown && <Dropdown toggleTheme={toggleTheme} />} {/* Passe toggleTheme para o Dropdown */}
+        {openDropdown && <Dropdown toggleTheme={toggleTheme} currentTheme={''} />} {/* Passe toggleTheme para o Dropdown */}
       </div>
 
     </>
