@@ -18,7 +18,7 @@ const Mobile_Navigation: React.FC = () => {
               <Search className='search-icon' />
               <input type="Pesquisar" placeholder='Pesquisar' />
             </div>
-            <div>
+            <div className='heart-link'>
               <NavLink to="/notifications" >
                 <div className="link heart">
                   <Heart className='icon' />

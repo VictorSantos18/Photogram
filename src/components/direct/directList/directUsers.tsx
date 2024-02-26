@@ -8,11 +8,8 @@ interface AvatarProps {
     status: string;
   };
 }
-interface Props {
-  image: User | undefined;
-}
 
-const DirectUsers: React.FC<Props> = ({ image }) => {
+const DirectUsers: React.FC<AvatarProps> = ({ image }) => {
   if (!image) {
     return null; // Retorna nulo se a imagem for indefinida
   }

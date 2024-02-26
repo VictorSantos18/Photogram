@@ -4,17 +4,28 @@ import ProfileImageCircle from '../../assets/bighead.svg';
 import { Grid3X3, Flag, SquareUser, Plus } from 'lucide-react';
 import { ProfilePostsData } from './data';
 import PostCard from './profilePost';
+import PostModal from '../modal/postModal';
 
+
+interface Post {
+  id: number;
+  image: string;
+  commentsContent: { user: string; content: string }[];
+  type: string;
+}
 
 const ProfileContent: React.FC = () => {
   const [toggle, setToggle] = useState(1);
   const [activeLink, setActiveLink] = useState(1);
+  const [selectedPost, setSelectedPost] = useState<Post | null>(null);
 
+  // function para alterar entre os menus da barra de navegação
   function updateToggle(id: number) {
     setToggle(id);
     setActiveLink(id);
   }
 
+  // Filtro referente ao menu de navegação dos posts
   const filteredPosts = ProfilePostsData.filter(post => {
     if (toggle === 1) return true;
     else if (toggle === 2) return post.type === 'preferidas';
@@ -22,6 +33,9 @@ const ProfileContent: React.FC = () => {
     return false;
   });
 
+  const openModal = (post: Post) => {
+    setSelectedPost(post);
+  };
 
   return (
     <div className='profile-content'>
@@ -123,11 +137,10 @@ const ProfileContent: React.FC = () => {
         <div className={toggle === 1 ? 'show-line' : 'line'}>
           {toggle === 1 && (
             <div className='show-first-line'>
-              {/* Dividindo os posts em grupos de 3 */}
               {[...Array(Math.ceil(filteredPosts.length / 3))].map((_, rowIndex) => (
-                <div key={rowIndex} className='row'>
+                <div key={rowIndex} className='row' >
                   {filteredPosts.slice(rowIndex * 3, rowIndex * 3 + 3).map((post, index) => (
-                    <div key={index} className='col'>
+                    <div key={index} className='col' onClick={() => openModal(post)}>
                       <PostCard image={post.image} commentsContent={post.commentsContent} />
                     </div>
                   ))}
@@ -143,7 +156,9 @@ const ProfileContent: React.FC = () => {
             <div className='show-second-line'>
               {filteredPosts.map((post, index) => (
                 post.type === 'preferidas' && (
-                  <PostCard key={index} image={post.image} commentsContent={post.commentsContent} />
+                  <div key={index} onClick={() => openModal(post)}>
+                    <PostCard image={post.image} commentsContent={post.commentsContent} />
+                  </div>
                 )
               ))}
             </div>
@@ -155,16 +170,18 @@ const ProfileContent: React.FC = () => {
             <div className='show-third-line'>
               {filteredPosts.map((post, index) => (
                 post.type === 'marcadas' && (
-                  <PostCard key={index} image={post.image} commentsContent={post.commentsContent} />
+                  <div key={index} onClick={() => openModal(post)}>
+                    <PostCard image={post.image} commentsContent={post.commentsContent} />
+                  </div>
                 )
               ))}
             </div>
           )}
         </div>
 
-        {/* {selectedPost && (
-          <PostModal post={selectedPost} onClose={closeModal} />
-        )} */}
+        {selectedPost && (
+          <PostModal post={selectedPost} onClose={() => setSelectedPost(null)} />
+        )}
 
       </div>
       <footer className='thirdy-part'>

@@ -39,6 +39,20 @@
   background: #343434;
   color: #fff;
 }
+.navbar .search .heart-link a{
+  display: flex;
+  color: #121212;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+}
+.navbar .search .heart-link a.active{
+  background: #121212;
+}
+
+
 
 /* Bottombar */
 
@@ -77,6 +91,7 @@
 
 .bottombar .bottombar-links a.active {
   border: 1px solid #ccc;
+  background-color: none;
   border-radius: 8px;
 
 }

@@ -39,7 +39,7 @@ button {
 /* ----------------------------- Light Theme ----------------------------- */
 .light-theme {
   transition: 200ms;
-  background-color: #ffffff;
+  background-color: #f1f1f1;
   color: #000;
 }
 .light-theme h2 {
@@ -51,6 +51,8 @@ button {
 .light-theme .icon{
 color: #000000;
 }
+
+/* Sidebar */
 .light-theme .sidebar .link .text-link {
   color: #000000;
 }
@@ -60,6 +62,34 @@ color: #000000;
 .light-theme .sidebar-content .link:hover{
   background: #c4c4c4;
 }
+
+/* navbar */
+.light-theme .navbar{
+  background: #f1f1f1;
+}
+.light-theme .bottombar{
+  background: #f1f1f1;
+}
+.light-theme .bottombar .bottombar-links a.active {
+  background-color: #c4c4c4;
+
+}
+.light-theme .navbar .search a.active{
+  background: #c4c4c4;
+}
+.light-theme .navbar .search a:hover{
+  background: #c4c4c4;
+}
+.light-theme .navbar .search input {
+  background: #c4c4c4 ;
+}
+.light-theme .navbar .search .search-icon{
+  color: #000;
+}
+
+
+
+
 .light-theme .avatar-name {
   color: #000;
 }
@@ -121,6 +151,7 @@ color: #000000;
   background-color: #121212;
   color: rgba(255, 255, 255, 0.87);
 }
+
 
 /* ----------------------------- Dark Theme -----------------------------   */
 

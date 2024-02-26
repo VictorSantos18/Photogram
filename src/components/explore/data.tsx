@@ -1,8 +1,6 @@
 export const ExplorePostsData = [
   {
     image: "https://wallpaperaccess.com/full/3464579.jpg",
-    likes: 1024,
-    comments: 52,
     commentsContent: [
       { user: "User1", content: "Esse design é incrível! Adoro os detalhes e as cores." },
       { user: "User2", content: "Que trabalho fantástico! O estilo e a composição são impressionantes." },
@@ -14,8 +12,6 @@ export const ExplorePostsData = [
   },
   {
     image: "https://wallpaperaccess.com/full/138444.jpg",
-    likes: 1382,
-    comments: 73,
     commentsContent: [
       { user: "User1", content: "Esse design é incrível! Adoro os detalhes e as cores." },
       { user: "User2", content: "Que trabalho fantástico! O estilo e a composição são impressionantes." },
@@ -27,8 +23,6 @@ export const ExplorePostsData = [
   },
   {
     image: "https://wallpaperaccess.com/full/3464593.jpg",
-    likes: 1104,
-    comments: 64,
     commentsContent: [
       { user: "User1", content: "Esse design é incrível! Adoro os detalhes e as cores." },
       { user: "User2", content: "Que trabalho fantástico! O estilo e a composição são impressionantes." },
@@ -40,8 +34,6 @@ export const ExplorePostsData = [
   },
   {
     image: "https://wallpaperaccess.com/full/2970555.jpg",
-    likes: 1530,
-    comments: 87,
     commentsContent: [
       { user: "User1", content: "Esse design é incrível! Adoro os detalhes e as cores." },
       { user: "User2", content: "Que trabalho fantástico! O estilo e a composição são impressionantes." },
@@ -53,8 +45,6 @@ export const ExplorePostsData = [
   },
   {
     image: "https://wallpaperaccess.com/full/1994605.jpg",
-    likes: 1530,
-    comments: 87,
     commentsContent: [
       { user: "User1", content: "Esse design é incrível! Adoro os detalhes e as cores." },
       { user: "User2", content: "Que trabalho fantástico! O estilo e a composição são impressionantes." },
@@ -66,8 +56,6 @@ export const ExplorePostsData = [
   },
   {
     image: "https://wallpaperaccess.com/full/3464598.jpg",
-    likes: 1530,
-    comments: 87,
     commentsContent: [
       { user: "User1", content: "Esse design é incrível! Adoro os detalhes e as cores." },
       { user: "User2", content: "Que trabalho fantástico! O estilo e a composição são impressionantes." },

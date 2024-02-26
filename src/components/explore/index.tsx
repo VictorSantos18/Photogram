@@ -6,10 +6,24 @@ import './style.css'
 
 const ExploreContent: React.FC = () => {
 
-  const [selectedPost, setSelectedPost] = useState<{ image: string; commentsContent: string[] } | null>(null); // Corrigindo o tipo de selectedPost
+  const [selectedPost, setSelectedPost] = useState<
+    {
+      image: string;
+      commentsContent: {
+        user: string;
+        content: string
+      }[]
+    } | null>(null);
 
   // Função para abrir o modal com o post selecionado
-  const openModal = (post: { image: string; commentsContent: string[] }) => { // Corrigindo o tipo do argumento
+  const openModal = (
+    post: {
+      image: string;
+      commentsContent: {
+        user: string;
+        content: string
+      }[]
+    }) => {
     setSelectedPost(post);
   };
 
@@ -29,8 +43,7 @@ const ExploreContent: React.FC = () => {
             <ExplorePosts
               key={index}
               image={post.image}
-              likes={post.likes}
-              comments={post.comments} commentsContent={''} />
+              commentsContent={post.commentsContent} /> 
           </div>
         ))}
       </div>
@@ -38,10 +51,9 @@ const ExploreContent: React.FC = () => {
         {secondRowPosts.map((post, index) => (
           <div key={index} onClick={() => openModal(post)}>
             <ExplorePosts
-              key={index + 3}
+              key={index}
               image={post.image}
-              likes={post.likes}
-              comments={post.comments} commentsContent={''} />
+              commentsContent={post.commentsContent} /> 
           </div>
         ))}
         {selectedPost && (
@@ -54,8 +66,7 @@ const ExploreContent: React.FC = () => {
             <ExplorePosts
               key={index}
               image={post.image}
-              likes={post.likes}
-              comments={post.comments} commentsContent={''} />
+              commentsContent={post.commentsContent} /> 
           </div>
         ))}
       </div>
@@ -63,10 +74,9 @@ const ExploreContent: React.FC = () => {
         {secondRowPosts.map((post, index) => (
           <div key={index} onClick={() => openModal(post)}>
             <ExplorePosts
-              key={index + 3}
+              key={index }
               image={post.image}
-              likes={post.likes}
-              comments={post.comments} commentsContent={''} />
+              commentsContent={post.commentsContent} /> 
           </div>
         ))}
         {selectedPost && (

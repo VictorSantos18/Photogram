@@ -7,6 +7,7 @@ const NotificationList: React.FC = () => {
   const todayNotifications = LikedNotification.filter(notification => notification.day === 'today');
   // Filtrar notificações para ontem
   const yesterdayNotifications = LikedNotification.filter(notification => notification.day === 'yesterday');
+    // Filtrar notificações para anteontem
   const beforeYesterdayNotifications = LikedNotification.filter(notification => notification.day === 'beforeYesterday');
 
   return (
