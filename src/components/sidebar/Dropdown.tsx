@@ -6,12 +6,12 @@ import WarningModal from '../WarningModal';
 
 interface DropdownProps {
   toggleTheme: () => void;
-  currentTheme: string; 
+  currentTheme: string;
 }
 
 const Dropdown: React.FC<DropdownProps> = ({ toggleTheme, currentTheme }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isChecked, setIsChecked] = useState(currentTheme === 'dark'); 
+  const [isChecked, setIsChecked] = useState(currentTheme === 'dark');
 
   useEffect(() => {
     setIsChecked(currentTheme === 'dark'); // Atualiza o estado do checkbox quando o tema muda

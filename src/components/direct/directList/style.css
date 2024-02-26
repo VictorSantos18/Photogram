@@ -71,3 +71,11 @@
 .text-direct.active {
   border-bottom: 1px solid #ccc;
 }
+@media(max-width:650px){
+  .direct-list-container{
+    width: 100%;
+  }
+  .direct-list-container .direct-head{
+    width: 100%;
+  }
+}

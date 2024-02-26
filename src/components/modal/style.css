@@ -155,7 +155,6 @@ font-size: 50px;
     width: 500px;
     position: relative;
     background: #121212;
-    top: -485px;
     padding: 0.5rem;
     display: flex;
     align-items: center;
@@ -176,4 +175,16 @@ font-size: 50px;
     top: 48px;
     right: 10px;
   }
+}
+@media(max-width:650px){
+  .modal-content {
+    max-width: 300px;
+    height: 500px;
+  }
+  .total-likes {
+    width: 300px;
+}
+.post-modal .post-modal-nav {
+  width: 300px;
+}
 }

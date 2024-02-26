@@ -14,7 +14,7 @@ const Mobile_Navigation: React.FC = () => {
             <h2>instagram</h2>
           </div>
           <div className="search">
-            <div>
+            <div className='search-content'>
               <Search className='search-icon' />
               <input type="Pesquisar" placeholder='Pesquisar' />
             </div>

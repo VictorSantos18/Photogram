@@ -79,3 +79,9 @@
     width: 400px;
   }
 }
+@media(max-width:650px) {
+  .check{
+    position: relative;
+    width: 300px;
+  }
+}

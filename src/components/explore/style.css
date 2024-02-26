@@ -55,10 +55,7 @@
 }
 @media(max-width: 645px) {
   .explore-content .line .photo {
-    width: 175px;
-    height: 175px;
-  }
-  .explore-content .line .photo .photo-info{
-    top: -175px;
+    width: 100px;
+    height: 100px;
   }
 }
