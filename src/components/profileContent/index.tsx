@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './style.css';
 import ProfileImageCircle from '../../assets/bighead.svg';
 import { Grid3X3, Flag, SquareUser, Plus } from 'lucide-react';
-import PostCard from './profilePost';
-import PostModal from '../modal/postModal';
 import { ProfilePostsData } from './data';
+import PostCard from './profilePost';
+
 
 const ProfileContent: React.FC = () => {
   const [toggle, setToggle] = useState(1);
@@ -15,20 +15,13 @@ const ProfileContent: React.FC = () => {
     setActiveLink(id);
   }
 
-  const [selectedPost, setSelectedPost] = useState<{ image: string; commentsContent: string[] } | null>(null); // Corrigindo o tipo de selectedPost
+  const filteredPosts = ProfilePostsData.filter(post => {
+    if (toggle === 1) return true;
+    else if (toggle === 2) return post.type === 'preferidas';
+    else if (toggle === 3) return post.type === 'marcadas';
+    return false;
+  });
 
-  // Função para abrir o modal com o post selecionado
-  const openModal = (post: { image: string; commentsContent: string[] }) => { // Corrigindo o tipo do argumento
-    setSelectedPost(post);
-  };
-
-  // Função para fechar o modal
-  const closeModal = () => {
-    setSelectedPost(null);
-  };
-
-  const firstRowPosts = ProfilePostsData.slice(0, 3);
-  const secondRowPosts = ProfilePostsData.slice(3, 6);
 
   return (
     <div className='profile-content'>
@@ -127,49 +120,51 @@ const ProfileContent: React.FC = () => {
           </span>
         </div>
 
-        <div className={toggle === 1 ? 'show-first-line' : 'line'}>
-          {[...Array(Math.ceil(ProfilePostsData.length / 3))].map((_, rowIndex) => (
-            <div className="post-row" key={rowIndex}>
-              {ProfilePostsData.slice(rowIndex * 3, (rowIndex + 1) * 3).map((post, index) => (
-                <div key={index} onClick={() => openModal(post)}>
-                  <PostCard
-                    key={index}
-                    image={post.image}
-                    commentsContent={''}
-                  />
+        <div className={toggle === 1 ? 'show-line' : 'line'}>
+          {toggle === 1 && (
+            <div className='show-first-line'>
+              {/* Dividindo os posts em grupos de 3 */}
+              {[...Array(Math.ceil(filteredPosts.length / 3))].map((_, rowIndex) => (
+                <div key={rowIndex} className='row'>
+                  {filteredPosts.slice(rowIndex * 3, rowIndex * 3 + 3).map((post, index) => (
+                    <div key={index} className='col'>
+                      <PostCard image={post.image} commentsContent={post.commentsContent} />
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
-          ))}
+          )}
         </div>
+
 
         <div className={toggle === 2 ? 'show-line' : 'line'}>
-          {firstRowPosts.map((post, index) => (
-            <div key={index} onClick={() => openModal(post)}>
-              <PostCard
-                key={index + 3}
-                image={post.image} 
-                commentsContent={''} 
-                />
+          {toggle === 2 && (
+            <div className='show-second-line'>
+              {filteredPosts.map((post, index) => (
+                post.type === 'preferidas' && (
+                  <PostCard key={index} image={post.image} commentsContent={post.commentsContent} />
+                )
+              ))}
             </div>
-          ))}
-
+          )}
         </div>
+
         <div className={toggle === 3 ? 'show-line' : 'line'}>
-          {secondRowPosts.map((post, index) => (
-            <div key={index} onClick={() => openModal(post)}>
-              <PostCard
-                key={index + 3}
-                image={post.image}
-                commentsContent={''} 
-                />
+          {toggle === 3 && (
+            <div className='show-third-line'>
+              {filteredPosts.map((post, index) => (
+                post.type === 'marcadas' && (
+                  <PostCard key={index} image={post.image} commentsContent={post.commentsContent} />
+                )
+              ))}
             </div>
-          ))}
-
+          )}
         </div>
-        {selectedPost && (
+
+        {/* {selectedPost && (
           <PostModal post={selectedPost} onClose={closeModal} />
-        )}
+        )} */}
 
       </div>
       <footer className='thirdy-part'>

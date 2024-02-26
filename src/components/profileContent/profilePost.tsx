@@ -3,7 +3,10 @@ import './style.css'
 
 interface PostCardProps {
   image: string;
-  commentsContent: string;
+  commentsContent: {
+    user: string;
+    content: string;
+  }[];
 }
 
 const PostCard: React.FC<PostCardProps> = ({ image }) => {

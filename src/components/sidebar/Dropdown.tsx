@@ -57,7 +57,7 @@ const Dropdown: React.FC<DropdownProps> = ({ toggleTheme, currentTheme }) => {
         </div>
       </div>
 
-      <NavLink onClick={handleLastNavLinkClick}>
+      <NavLink onClick={handleLastNavLinkClick} to='#'>
         <div className='dropdown-link'>
           <MessageSquareWarning className='icon' />
           <span className='text'>Relatar um problema</span>

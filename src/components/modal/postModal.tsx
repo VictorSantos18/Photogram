@@ -50,13 +50,14 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
             </div>
           </div>
           {/* Mapeamento dos comentários */}
-          {post.commentsContent.map((comment, index) => (
+          {post && post.commentsContent && post.commentsContent.map((comment, index) => (
             <div key={index} className='map-comment'>
               <img src={ProfileImageCircle} alt="imagem de perfil" className='post-modal-image-circle' />
               <h2 className='map-comment-username'>{comment.user}</h2>
               <p className='map-comment-text'>{comment.content}</p>
             </div>
           ))}
+
         </div>
         <div className="total-likes">
           <div className="total-likes-icon">

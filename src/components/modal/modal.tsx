@@ -9,7 +9,7 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ onClose, imageComponent, commentsComponent }) => {
   return (
-    <div className="modal">
+    <div className="modal">z
       <div className="modal-content">
         <span className="close" onClick={onClose}>&times;</span>
         <div className="modal-image">{imageComponent}</div>
