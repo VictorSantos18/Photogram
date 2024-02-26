@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   border: 1px solid #3c3c3c;
+  border-top: none;
   border-left: none;
   width: 350px;
 }
@@ -76,6 +77,27 @@
     width: 100%;
   }
   .direct-list-container .direct-head{
+    position: fixed;
+    background: #121212 ;
+    padding: 0;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 20;
     width: 100%;
+    border-right: none;
   }
+  .direct-list-container .direct-head .direct-name {
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+  } 
+  .direct-list-container .direct-head .direct-nav {
+    padding: 0;
+  } 
+  .show-direct-list {
+    margin-top: 80px;
+  }
+  .direct-list-container {
+    border-right: none;
+    min-height: 100vh;
+}
 }

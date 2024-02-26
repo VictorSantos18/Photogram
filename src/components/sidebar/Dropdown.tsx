@@ -1,21 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Bolt, Moon, Sun, Flag, MessageSquareWarning } from 'lucide-react';
+import { useOutsideClick } from '../../hook/index'
 import './style.css';
 import WarningModal from '../WarningModal';
 
 interface DropdownProps {
   toggleTheme: () => void;
   currentTheme: string;
+  onClose: () => void; 
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ toggleTheme, currentTheme }) => {
+const Dropdown: React.FC<DropdownProps> = ({ toggleTheme, currentTheme, onClose }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isChecked, setIsChecked] = useState(currentTheme === 'dark');
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    setIsChecked(currentTheme === 'dark'); // Atualiza o estado do checkbox quando o tema muda
-  }, [currentTheme]);
+  // Utilize o hook useOutsideClick para detectar cliques fora do dropdown
+  useOutsideClick(dropdownRef, () => {
+    onClose(); // Chame a função onClose para fechar o dropdown
+  });
 
   const handleLastNavLinkClick = () => {
     setIsModalOpen(true);
@@ -26,12 +30,12 @@ const Dropdown: React.FC<DropdownProps> = ({ toggleTheme, currentTheme }) => {
   };
 
   const handleThemeToggle = () => {
-    toggleTheme(); // Altera o tema quando o checkbox é clicado
-    setIsChecked(!isChecked); // Atualiza o estado do checkbox
+    toggleTheme();
+    setIsChecked(!isChecked);
   };
 
   return (
-    <div className='dropdown-links'>
+    <div ref={dropdownRef} className='dropdown-links'>
       <NavLink to='/configurações/edit'>
         <div className='dropdown-link'>
           <Bolt className='icon' />

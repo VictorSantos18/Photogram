@@ -1,16 +1,25 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import ProfileImage from '../../assets/bighead.svg'
 import { NavLink } from 'react-router-dom'
 import { Home, Search, Compass, MessageCircleMore, Heart, Instagram, AlignJustify } from 'lucide-react'
 import './style.css'
 import Dropdown from './Dropdown'
+import { useOutsideClick } from '../../hook'
 
 interface SidebarProps {
   isOpen: boolean;
   toggleTheme: () => void;
 }
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleTheme }) => {
-  const [openDropdown, setOpenDropdown] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(false); 
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const handleCloseDropdown = () => {
+    setOpenDropdown(false);
+  };
+
+  useOutsideClick(dropdownRef, handleCloseDropdown);
+
 
   return (
     <>
@@ -61,7 +70,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleTheme }) => {
           <AlignJustify />
           <span className='text-link'>Mais</span>
         </div>
-        {openDropdown && <Dropdown toggleTheme={toggleTheme} currentTheme={''} />} {/* Passe toggleTheme para o Dropdown */}
+        {openDropdown && <Dropdown toggleTheme={toggleTheme} currentTheme={''} onClose={handleCloseDropdown} />}
       </div>
 
     </>

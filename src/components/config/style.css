@@ -6,7 +6,7 @@
 .last-item{
   width: 100%;
   max-width: 700px;
-  border: 2px solid #3c3c3c;
+  border: 1px solid #3c3c3c;
   border-radius: 10px;
   padding:  1rem ;
   display: flex;
@@ -77,11 +77,12 @@
 }
 
 .config-container .config-user-bio textarea{
-width: 100%;
-max-width: 700px;
-height: 150px;
-padding: 0.5rem 1rem;
-border-radius: 8px;
-background-color: #3c3c3c;
-color: #ccc;
+  width: 100%;
+  max-width: 700px;
+  height: 150px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #3c3c3c;
+  color: #ccc;
 }
+

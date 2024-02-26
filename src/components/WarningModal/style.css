@@ -59,3 +59,8 @@
 .modal-overlay .warning-modal .warning-modal-content .warning-modal-content-footer .text-section{
   padding: 1rem ;
 }
+@media(max-width: 650px){
+  .modal-overlay .warning-modal .warning-modal-content {
+    width: 300px;
+  }
+}

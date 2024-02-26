@@ -1,17 +1,33 @@
-import { MessageCircleMore, Search } from 'lucide-react'
+import { AlignJustify, MessageCircleMore, Search } from 'lucide-react'
 import './style.css'
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Home, Compass, Heart } from 'lucide-react'
 import ProfileImage from '../../assets/bighead.svg'
+import Dropdown from '../sidebar/Dropdown'
+import { useOutsideClick } from '../../hook'
 
-const Mobile_Navigation: React.FC = () => {
+interface MobileNavigationProps {
+  toggleTheme: () => void;
+}
+
+const Mobile_Navigation: React.FC<MobileNavigationProps> = ({ toggleTheme }) => {
+  const [openDropdown, setOpenDropdown] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const handleCloseDropdown = () => {
+    setOpenDropdown(false);
+  };
+
+  useOutsideClick(dropdownRef, handleCloseDropdown);
+
+
   return (
     <>
       <div className="navigation">
         <nav className='navbar'>
           <div className="logo">
-            <h2>instagram</h2>
+            <h2>Photogram</h2>
           </div>
           <div className="search">
             <div className='search-content'>
@@ -30,16 +46,20 @@ const Mobile_Navigation: React.FC = () => {
 
         <footer className='bottombar'>
           <div className="bottombar-links">
-            <NavLink to="/">
-              <div className="link home">
-                <Home className='icon' />
-                <span className='text-link'>Página inicial</span>
-              </div>
-            </NavLink>
+            <div className="link" onClick={() => setOpenDropdown(prev => !prev)}>
+              <AlignJustify />
+              <span className='text-link'>Mais</span>
+            </div>
             <NavLink to="/explore" >
               <div className="link compass">
                 <Compass className='icon' />
                 <span className='text-link'>Explorar</span>
+              </div>
+            </NavLink>
+            <NavLink to="/">
+              <div className="link home">
+                <Home className='icon' />
+                <span className='text-link'>Página inicial</span>
               </div>
             </NavLink>
             <NavLink to="/direct" >
@@ -57,6 +77,7 @@ const Mobile_Navigation: React.FC = () => {
           </div>
         </footer>
       </div>
+      {openDropdown && <Dropdown toggleTheme={toggleTheme} currentTheme={''} onClose={handleCloseDropdown} />}
     </>
   )
 }

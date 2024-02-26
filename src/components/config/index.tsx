@@ -66,11 +66,6 @@ here you can find some pictures that i drew.🖌️" />
             </p>
           </div>
         </div>
-
-        <div className="checkbox">
-          <input type="checkbox" readOnly />
-          <label htmlFor="checkboxOneInput"></label>
-        </div>
       </div>
 
       <div className="btn-item">

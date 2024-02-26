@@ -13,7 +13,7 @@ const Home: React.FC<{toggleTheme: () => void}> = ({ toggleTheme }) => {
     <div>
       <Sidebar isOpen={isOpen} toggleTheme={toggleTheme}/>
       <div className='page-container'>
-        <Mobile_Navigation />
+        <Mobile_Navigation toggleTheme={toggleTheme}/>
         <div className="content">
           <Posts />
           <ForYou />

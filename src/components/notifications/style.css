@@ -34,3 +34,8 @@
   gap: 1rem;
   align-items: center;
  }
+ @media(max-width: 515px){
+  .notification-list-container{
+    width: 100%;
+  }
+ }

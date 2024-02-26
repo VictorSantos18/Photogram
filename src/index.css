@@ -72,7 +72,6 @@ color: #000000;
 }
 .light-theme .bottombar .bottombar-links a.active {
   background-color: #c4c4c4;
-
 }
 .light-theme .navbar .search a.active{
   background: #c4c4c4;
@@ -87,9 +86,9 @@ color: #000000;
   color: #000;
 }
 
-
-
-
+.light-theme .direct-detail .direct-box:hover {
+  background: #ccc;
+}
 .light-theme .avatar-name {
   color: #000;
 }
@@ -106,8 +105,11 @@ color: #000000;
 .light-theme .profile-content .first-part .profile-text .profile-bio .text-profile {
   color: #000;
 }
+
+/* Dropdown  */
+
 .light-theme .dropdown-links{
-  background: #f1f1f1;
+  background: #ccc;
 }
 .light-theme .dropdown-links .dropdown-link:hover{
   background: #ccc;
@@ -142,9 +144,16 @@ color: #000000;
   background-color: #f1f1f1;
   color: #000;
 }
-
-
-
+.light-theme  .direct-list-container .direct-head{
+  background: #f1f1f1 ;
+}
+.light-theme .map-comment-input input{
+  background: #f1f1f1;
+  color: #121212;
+}
+.light-theme .profile-content .seccond-part .navigation-bar .text-profile {
+  color: #121212;
+}
 /* ----------------------------- Dark Theme -----------------------------   */
 .dark-theme {
   transition: 200ms;

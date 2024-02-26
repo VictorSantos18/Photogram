@@ -12,7 +12,7 @@ const Direct: React.FC<{toggleTheme: () => void}> = ({ toggleTheme })  => {
     <div>
       <Sidebar isOpen={isOpen} toggleTheme={toggleTheme}/>
       <div className='direct-page-container'>
-        <Mobile_Navigation />
+        <Mobile_Navigation toggleTheme={toggleTheme}/>
         <div className="direct">
           <DirectList />
           <DirectMessage />
